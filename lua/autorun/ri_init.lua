@@ -25,6 +25,11 @@ _G.ri = ri
 
 ri.isClubRandom = game.GetIPAddress () == "72.14.181.134:27015"
 
+/**
+ * Alerts all the admins of the gameserver
+ *
+ */
+
 function ri.alert ()
 	for _, ply in pairs (player.GetAll ()) do
 		if ply:IsAdmin () then
@@ -35,6 +40,13 @@ function ri.alert ()
 	end
 end
 
+/**
+ * Creates a new payload report (pre)
+ *
+ * @param Player        (The Violator)
+ * @param Payload Name  (Which payload should we use)
+ * @param Payload Info  (What's in the payload)
+ */
 function ri.handlePayload (ply, strPayloadName, strPayloadValue)
 
 	local payload = anticheat.Create (ply, strPayloadName, strPayloadValue)

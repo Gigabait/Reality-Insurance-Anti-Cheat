@@ -11,6 +11,12 @@ anticheat.SetActions = function (self, tblActions)
 	self.Actions = tblActions
 end
 
+/**
+ * Process all the agression callbacks on the payload
+ *
+ * @param self
+ */
+
 anticheat.ProcessActions = function (self)
 	if not self.Actions then
 		error ("attempting to anticheat/ProcessActions before using anticheat/SetActions!")
@@ -20,6 +26,14 @@ anticheat.ProcessActions = function (self)
 		funcMethod (self)
 	end
 end
+
+/**
+ * Creates a new payload report
+ *
+ * @param Player        (The Violator)
+ * @param Payload Name  (Which payload should we use)
+ * @param Payload Info  (What's in the payload)
+ */
 
 anticheat.Create = function (ply, strPayloadName, strPayloadValue)
 	local struct = {
