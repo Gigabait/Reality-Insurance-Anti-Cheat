@@ -1,3 +1,5 @@
+-- Put all aggression callbacks here plz
+
 aggression.coolAnnounce = 0
 
 aggression.Announce = function (self)
