@@ -62,7 +62,7 @@ Not required but recommended you plop them in this location:
 		for i = 1, #tblPlayers do
 			if tblPlayers[i]:GetInfoNum ("sv_allowcslua") != 0 then
 
-				-- Creates a new payload report with the subject 'speedhacks' and a description of nothing
+				-- Creates a new payload report with the subject 'cs_luaexpoitation' and a description of nothing
 
 				ri.handlePayload (ply, "cs_luaexpoitation", "")
 			end
