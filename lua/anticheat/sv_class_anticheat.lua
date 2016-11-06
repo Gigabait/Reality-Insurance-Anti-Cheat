@@ -7,9 +7,31 @@ anticheat.struct = {}
 include "anticheat/config/sv_anticheat_phrases.lua"
 include "anticheat/config/sv_anticheat_hmethods.lua"
 
+-- Helper Methods
+anticheat.GetPlayer = function (self)
+	return self.Player
+end
+
+anticheat.GetPayloadName = function (self)
+	return self.Method
+end
+
+anticheat.GetMethod= anticheat.GetPayloadName 
+
+anticheat.GetPayload = function (self)
+	return self.Payload
+end
+
+/**
+ * Sets the actions of the payload
+ *
+ * @param self
+ * @param Actions (Table of aggression callbacks)
+ */
 anticheat.SetActions = function (self, tblActions)
 	self.Actions = tblActions
 end
+
 
 /**
  * Process all the agression callbacks on the payload
